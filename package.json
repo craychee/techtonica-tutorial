@@ -1,0 +1,41 @@
+{
+    "name": "techtonica-tutorial",
+    "description": "Node.js Twitter Bot and PubSub sample for Google App Engine Standard Environment.",
+    "version": "0.0.1",
+    "private": true,
+    "license": "Apache-2.0",
+    "author": "craychee",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/craychee/techtonica-tutorial.git"
+    },
+    "engines": {
+        "node": "8.x.x"
+    },
+    "scripts": {
+        "deploy": "gcloud app deploy",
+        "start": "node app.js",
+        "lint": "repo-tools lint",
+        "pretest": "npm run lint",
+        "system-test": "repo-tools test app",
+        "test": "npm run system-test",
+        "e2e-test": "repo-tools test deploy"
+    },
+    "dependencies": {
+        "express": "^4.16.3",
+        "twit": "^2.2.10"
+    },
+    "devDependencies": {
+        "@google-cloud/nodejs-repo-tools": "^2.3.0",
+        "semistandard": "^12.0.1"
+    },
+    "cloud-repo-tools": {
+        "test": {
+            "app": {
+                "msg": "Hello, world!"
+            }
+        },
+        "requiresKeyFile": true,
+        "requiresProjectId": true
+    }
+}
