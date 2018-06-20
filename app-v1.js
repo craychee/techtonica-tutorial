@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
       res.status(200).send('Hello, techtonica!').end();
 });
 
+// For documentation, see: https://github.com/ttezel/twit
 var TweetBot = new Twit({
       consumer_key:         '',
       consumer_secret:      '',

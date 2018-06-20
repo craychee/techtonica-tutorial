@@ -1,3 +1,11 @@
 # [START app_yaml]
 runtime: nodejs8
 # [END app_yaml]
+
+# [START env]
+env_variables:
+  PUBSUB_TOPIC: YOUR-TOPIC
+  # This token is used to verify that requests originate from your
+  # application. It can be any sufficiently random string.
+  PUBSUB_VERIFICATION_TOKEN: RANDOM-STRING
+# [END env]
